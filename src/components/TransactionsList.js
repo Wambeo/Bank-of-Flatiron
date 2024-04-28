@@ -45,9 +45,6 @@ function TransactionsList({searchValue}) {
           <th>
             <h3 className="ui center aligned header">Amount</h3>
           </th>
-          <th>
-            <h3 className="ui center aligned header">Actions</h3>
-          </th>
           
         </tr>
         {/* render a list of <Transaction> components here */}
