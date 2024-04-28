@@ -1,9 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useMemo} from "react";
 import Transaction from "./Transaction";
 
 
-function TransactionsList() {
-  const [transactions, setTransactions] = useState([])
+
+
+function TransactionsList({searchValue}) {
+  const [transactions, setTransactions] = useState([]) 
+
+ console.log(searchValue)
 
   useEffect(()=>{
     fetch("http://localhost:8001/transactions")
@@ -13,6 +17,16 @@ function TransactionsList() {
       })
   }, [])
 
+  const filteredTransactions = useMemo(() => {
+    if (!searchValue) {
+      return transactions;
+    }
+    return transactions.filter((transaction) =>
+      transaction.description.toLowerCase().includes(searchValue.toLowerCase())
+    );
+ }, [transactions, searchValue]);
+   
+ 
     
 
   return (
@@ -31,10 +45,15 @@ function TransactionsList() {
           <th>
             <h3 className="ui center aligned header">Amount</h3>
           </th>
+          <th>
+            <h3 className="ui center aligned header">Actions</h3>
+          </th>
+          
         </tr>
         {/* render a list of <Transaction> components here */}
-        {transactions.map((transaction) => {
+        {filteredTransactions.map((transaction) => {
           return <Transaction key={transaction.id} transaction={transaction} />
+          
         })}
         
       </tbody>

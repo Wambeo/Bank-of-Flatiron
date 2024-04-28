@@ -1,14 +1,14 @@
 import React from "react";
-import TransactionsList from "./TransactionsList";
+// import TransactionsList from "./TransactionsList";
 import Search from "./Search";
-import AddTransactionForm from "./AddTransactionForm";
+// import AddTransactionForm from "./AddTransactionForm";
 
 function AccountContainer() {
   return (
     <div>
       <Search />
-      <AddTransactionForm />
-      <TransactionsList />
+      {/* <AddTransactionForm /> */}
+      {/* <TransactionsList /> */}
     </div>
   );
 }

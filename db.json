@@ -99,6 +99,22 @@
       "amount": "350",
       "description": "Welcome to my house",
       "id": 14
+    },
+    {
+      "date": "2024-04-29",
+      "name": "",
+      "category": "Question",
+      "amount": "20",
+      "description": "What a lovely day",
+      "id": 15
+    },
+    {
+      "date": "2024-04-10",
+      "name": "",
+      "category": "Don't Know",
+      "amount": "234",
+      "description": "Nothing yet",
+      "id": 16
     }
   ]
 }
