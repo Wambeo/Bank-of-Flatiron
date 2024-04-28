@@ -7,8 +7,6 @@ function AddTransactionForm() {
     name : "",
     category: "",
     amount: "",
-  
-
   })
 
   function handleChange(e){
@@ -20,7 +18,7 @@ function AddTransactionForm() {
    function handleSubmit(e){
     
     e.preventDefault();    
-      fetch("http://localhost:8001/transactions", {
+      fetch("https://bank-of-flatiron-92eu.onrender.com/transactions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

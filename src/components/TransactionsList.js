@@ -10,7 +10,7 @@ function TransactionsList({searchValue}) {
  console.log(searchValue)
 
   useEffect(()=>{
-    fetch("http://localhost:8001/transactions")
+    fetch("https://bank-of-flatiron-92eu.onrender.com/transactions")
       .then(res => res.json())
       .then((data) => {
         setTransactions(data)
