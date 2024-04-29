@@ -36,25 +36,11 @@
       "amount": 8.75
     },
     {
-      "id": 6,
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": -17.59
-    },
-    {
       "id": 7,
       "date": "2019-12-07",
       "description": "Birthday Check from Grandma",
       "category": "Gift",
       "amount": 50
-    },
-    {
-      "id": 8,
-      "date": "2019-12-09",
-      "description": "Lyft Ride",
-      "category": "Transportation",
-      "amount": -13.25
     },
     {
       "id": 9,
@@ -107,22 +93,6 @@
       "amount": "20",
       "description": "What a lovely day",
       "id": 15
-    },
-    {
-      "date": "2024-04-10",
-      "name": "",
-      "category": "Don't Know",
-      "amount": "234",
-      "description": "Nothing yet",
-      "id": 16
-    },
-    {
-      "date": "2024-04-11",
-      "name": "",
-      "category": "Music",
-      "amount": "34",
-      "description": "It was awesome",
-      "id": 17
     }
   ]
 }

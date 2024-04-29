@@ -6,6 +6,8 @@ import Transaction from "./Transaction";
 
 function TransactionsList({searchValue}) {
   const [transactions, setTransactions] = useState([]) 
+  const [onDelete, setOnDelete] = useState(false)
+ 
 
  console.log(searchValue)
 
@@ -15,7 +17,7 @@ function TransactionsList({searchValue}) {
       .then((data) => {
         setTransactions(data)
       })
-  }, [])
+  }, [onDelete])
 
   const filteredTransactions = useMemo(() => {
     if (!searchValue) {
@@ -45,11 +47,14 @@ function TransactionsList({searchValue}) {
           <th>
             <h3 className="ui center aligned header">Amount</h3>
           </th>
+          <th>
+            <h3 className="ui center aligned header">Actions</h3>
+          </th>
           
         </tr>
         {/* render a list of <Transaction> components here */}
         {filteredTransactions.map((transaction) => {
-          return <Transaction key={transaction.id} transaction={transaction} />
+          return <Transaction key={transaction.id} onDelete = {onDelete}setOnDelete = {setOnDelete}transaction={transaction} />
           
         })}
         
